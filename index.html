@@ -46,14 +46,21 @@
         </div>
         <div class="banner-cta">
           <div class="banner-dock flex items-center">
-            <button class="btn btn-1">Portfolio</button>
-            <button class="btn btn-primary">Hire Me</button>
+            <a
+              href="https://www.behance.net/Nitingraphix"
+              target="_blank"
+              class="btn btn-1"
+              >Portfolio</a
+            >
+            <a href="mailto:nitinux.in@gmail.com" class="btn btn-primary"
+              >Hire Me</a
+            >
           </div>
         </div>
       </div>
       <!-- marquee element -->
       <div
-        class="marquee-container"
+        class="marquee-container animate-on-scroll"
         data-vertical="false"
         data-reverse="false"
         data-pause-on-hover="true"
@@ -86,7 +93,10 @@
       </div>
 
       <!-- What I Do? -->
-      <div id="services" class="what-i-do flex flex-col items-center">
+      <div
+        id="services"
+        class="what-i-do animate-on-scroll flex flex-col items-center"
+      >
         <h3 class="title">What I Do?</h3>
         <div class="what-i-do-body flex justify-between items-center">
           <!-- 1st card -->
@@ -179,14 +189,33 @@
           <button class="btn btn-bordered">App/Web</button>
         </div>
         <div class="projects-body flex flex-col">
-          <div class="project-card project-1"></div>
-          <div class="project-card project-2"></div>
-          <div class="project-card project-3"></div>
-          <div class="project-card project-4"></div>
+          <a
+            href="https://www.behance.net/Nitingraphix"
+            target="_blank"
+            class="project-card animate-on-scroll project-1"
+          ></a>
+          <a
+            href="https://www.behance.net/Nitingraphix"
+            target="_blank"
+            class="project-card animate-on-scroll project-2"
+          ></a>
+          <a
+            href="https://www.behance.net/Nitingraphix"
+            target="_blank"
+            class="project-card animate-on-scroll project-3"
+          ></a>
+          <a
+            href="https://www.behance.net/Nitingraphix"
+            target="_blank"
+            class="project-card animate-on-scroll project-4"
+          ></a>
         </div>
       </div>
       <!-- testimonial -->
-      <div class="testimonial flex flex-col items-center" id="testimonial">
+      <div
+        class="testimonial animate-on-scroll flex flex-col items-center"
+        id="testimonial"
+      >
         <h3 class="title">Hear From My Clients 🫶</h3>
         <div class="card flex flex-col w-full">
           <div class="flex items-center">
@@ -207,7 +236,7 @@
       </div>
     </div>
     <!-- footer -->
-    <div class="footer-container" id="contact">
+    <div class="footer-container animate-on-scroll" id="contact">
       <div class="footer flex justify-between items-center">
         <div class="flex flex-col">
           <span>Visit my</span>
@@ -247,25 +276,50 @@
       }
     });
 
+    // custom cursor
     $(document).ready(function () {
       const $cursor = $(".cursor");
 
+      // change cursor position when mouse moves
       $(document).on("mousemove", function (e) {
-        // Update the cursor position
         $cursor.css({
           top: e.clientY + "px",
           left: e.clientX + "px",
         });
       });
 
-      $(document).on("mouseleave", function () {
-        // Hide cursor when leaving the window
-        $cursor.hide();
+      // Scale cursor on hover
+      $("a, button").on("mouseenter", function () {
+        $cursor.addClass("scale");
       });
 
-      $(document).on("mouseenter", function () {
-        // Show cursor when entering the window
-        $cursor.show();
+      $("a, button").on("mouseleave", function () {
+        $cursor.removeClass("scale");
+      });
+    });
+
+    // smooth scroll
+
+    $('a[href^="#"]').on("click", function (e) {
+      e.preventDefault();
+      $("html, body").animate(
+        {
+          scrollTop: $($.attr(this, "href")).offset().top,
+        },
+        800
+      );
+    });
+
+    // animate on scroll
+
+    $(window).on("scroll", function () {
+      $(".animate-on-scroll").each(function () {
+        if (
+          $(this).offset().top <
+          $(window).scrollTop() + $(window).height() - 200
+        ) {
+          $(this).addClass("visible");
+        }
       });
     });
   </script>

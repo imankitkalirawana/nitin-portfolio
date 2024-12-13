@@ -6,17 +6,19 @@
     <title>contact_us</title>
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/contact.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
+    <div class="cursor"></div>
     <!-- navbar -->
     <div class="navbar flex justify-between items-center">
       <div class="navbar-logo">
         <a href="/">Nitinux<span class="text-primary">.</span>in</a>
       </div>
       <ul class="navbar-menu flex justify-center items-center">
-        <li class="navbar-item"><a href="#services">Services</a></li>
-        <li class="navbar-item"><a href="#projects">Projects</a></li>
-        <li class="navbar-item"><a href="#testimonial">Testimonials</a></li>
+        <li class="navbar-item"><a href="/#services">Services</a></li>
+        <li class="navbar-item"><a href="/#projects">Projects</a></li>
+        <li class="navbar-item"><a href="/#testimonial">Testimonials</a></li>
         <li class="navbar-item active"><a href="/contact.html">Contact</a></li>
       </ul>
       <div class="navbar-cta">
@@ -240,4 +242,27 @@
     </div>
   </body>
   <script src="/script.js"></script>
+  <script>
+    // custom cursor
+    $(document).ready(function () {
+      const $cursor = $(".cursor");
+
+      // change cursor position when mouse moves
+      $(document).on("mousemove", function (e) {
+        $cursor.css({
+          top: e.clientY + "px",
+          left: e.clientX + "px",
+        });
+      });
+
+      // Scale cursor on hover
+      $("a, button").on("mouseenter", function () {
+        $cursor.addClass("scale");
+      });
+
+      $("a, button").on("mouseleave", function () {
+        $cursor.removeClass("scale");
+      });
+    });
+  </script>
 </html>
