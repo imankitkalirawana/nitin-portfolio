@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nitin-Portfolio</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <!-- header -->
+    <div class="navbar flex justify-between items-center">
+      <div class="navbar-logo">
+        <a href="/">Nitinux<span class="text-primary">.</span>in</a>
+      </div>
+      <ul class="navbar-menu flex justify-center items-center">
+        <li class="navbar-item"><a href="#services">Services</a></li>
+        <li class="navbar-item"><a href="#projects">Projects</a></li>
+        <li class="navbar-item"><a href="#testimonial">Testimonials</a></li>
+        <li class="navbar-item"><a href="/contact.html">Contact</a></li>
+      </ul>
+      <div class="navbar-cta">
+        <button class="btn btn-primary">Download CV</button>
+      </div>
+    </div>
+
+    <!-- main -->
+    <div class="main">
+      <!-- banner -->
+      <div
+        class="banner flex w-full flex-col w-full justify-center items-center"
+      >
+        <div class="flex justify-between w-full items-center">
+          <div class="banner-text flex flex-col">
+            <div>
+              <span>I Build</span>
+              <!-- <span>UI/UX</span> -->
+            </div>
+            <div class="text-primary">User Experiences</div>
+            <div>and <span class="text-primary">Brands.</span></div>
+          </div>
+          <div class="banner-avatar">
+            <img src="/images/avatar.png" class="avatar" alt="" />
+          </div>
+        </div>
+        <div class="banner-cta">
+          <div class="banner-dock flex items-center">
+            <button class="btn btn-1">Portfolio</button>
+            <button class="btn btn-primary">Hire Me</button>
+          </div>
+        </div>
+      </div>
+      <!-- marquee element -->
+      <div
+        class="marquee-container"
+        data-vertical="false"
+        data-reverse="false"
+        data-pause-on-hover="true"
+      >
+        <div class="marquee-mask"></div>
+
+        <div class="marquee-content">
+          <div class="marquee-item">
+            <img src="/images/icons/framer.png" />
+          </div>
+          <div class="marquee-item">
+            <img src="/images/icons/notion.png" />
+          </div>
+          <div class="marquee-item">
+            <img src="/images/icons/slack.png" />
+          </div>
+          <div class="marquee-item">
+            <img src="/images/icons/after-effect.png" />
+          </div>
+          <div class="marquee-item">
+            <img src="/images/icons/photoshop.png" />
+          </div>
+          <div class="marquee-item">
+            <img src="/images/icons/illustrator.png" />
+          </div>
+          <div class="marquee-item">
+            <img src="/images/icons/figma.png" />
+          </div>
+        </div>
+      </div>
+
+      <!-- What I Do? -->
+      <div id="services" class="what-i-do flex flex-col items-center">
+        <h3 class="title">What I Do?</h3>
+        <div class="what-i-do-body flex justify-between items-center">
+          <!-- 1st card -->
+          <div class="what-i-do-item flex flex-col justify-between">
+            <div class="what-i-do-icons">
+              <img
+                src="/images/icons/pencil-icon.png"
+                class="what-i-do-icon"
+                alt=""
+              />
+              <img
+                src="/images/icons/swap-icon.png"
+                class="what-i-do-icon"
+                alt=""
+              />
+              <img
+                src="/images/icons/bezier-icon.png"
+                class="what-i-do-icon"
+                alt=""
+              />
+            </div>
+            <div class="what-i-do-item-title">Branding</div>
+            <div class="what-i-do-item-description">
+              Need your brand to speak for itself ?
+              <br />
+              <span>I Can Do It !</span>
+            </div>
+          </div>
+          <!-- 2nd card -->
+          <div class="what-i-do-item flex flex-col justify-between">
+            <div class="what-i-do-icons">
+              <img
+                src="/images/icons/pencil-icon.png"
+                class="what-i-do-icon"
+                alt=""
+              />
+              <img
+                src="/images/icons/swap-icon.png"
+                class="what-i-do-icon"
+                alt=""
+              />
+              <img
+                src="/images/icons/bezier-icon.png"
+                class="what-i-do-icon"
+                alt=""
+              />
+            </div>
+            <div class="what-i-do-item-title">UI/UX</div>
+            <div class="what-i-do-item-description">
+              Need to improve the User Experience of your Website or App ?
+              <br />
+              <span>I Can Do It !</span>
+            </div>
+          </div>
+          <!-- 3rd card -->
+          <div class="what-i-do-item flex flex-col justify-between">
+            <div class="what-i-do-icons">
+              <img
+                src="/images/icons/pencil-icon.png"
+                class="what-i-do-icon"
+                alt=""
+              />
+              <img
+                src="/images/icons/swap-icon.png"
+                class="what-i-do-icon"
+                alt=""
+              />
+              <img
+                src="/images/icons/bezier-icon.png"
+                class="what-i-do-icon"
+                alt=""
+              />
+            </div>
+            <div class="what-i-do-item-title">Web/App</div>
+            <div class="what-i-do-item-description">
+              Need your design your App or Web ?
+              <br />
+              <span>I Can Do It !</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Projects -->
+      <div class="projects flex flex-col items-center" id="projects">
+        <h3 class="title">Projects I have lived for 🫶</h3>
+        <div class="chips flex items-center">
+          <button class="btn btn-primary">All</button>
+          <button class="btn btn-bordered">UI/UX</button>
+          <button class="btn btn-bordered">Branding</button>
+          <button class="btn btn-bordered">App/Web</button>
+        </div>
+        <div class="projects-body flex flex-col">
+          <div class="project-card project-1"></div>
+          <div class="project-card project-2"></div>
+          <div class="project-card project-3"></div>
+          <div class="project-card project-4"></div>
+        </div>
+      </div>
+      <!-- testimonial -->
+      <div class="testimonial flex flex-col items-center" id="testimonial">
+        <h3 class="title">Hear From My Clients 🫶</h3>
+        <div class="card flex flex-col w-full">
+          <div class="flex items-center">
+            <img src="/images/testimonial.png" class="avatar" alt="" />
+            <div class="flex flex-col">
+              <h3>Tapesh Kumar</h3>
+              <span>CEO - BRO Audio</span>
+            </div>
+          </div>
+          <p class="card-content">
+            "Working with you was a game-changer for our brand. Your creative
+            ideas and strategic approach breathed new life into our identity.
+            We're thrilled with the results and the positive impact you've had
+            on our business. Your attention to detail and commitment to
+            excellence exceeded our expectations."
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <div class="footer-container" id="contact">
+      <div class="footer flex justify-between items-center">
+        <div class="flex flex-col">
+          <span>Visit my</span>
+          <a href="#"
+            >Socials
+            <img src="/images/icons/arrow-down-right.png" width="35" alt="" />
+          </a>
+        </div>
+        <div class="flex flex-col">
+          <span>See my</span>
+          <a href="https://www.behance.net/Nitingraphix" target="_blank"
+            >Porfolio
+            <img src="/images/icons/arrow-down-right.png" width="35" alt="" />
+          </a>
+        </div>
+        <div class="flex flex-col">
+          <span>Send me an</span>
+          <a href="#"
+            >E-mail
+            <img src="/images/icons/arrow-down-right.png" width="35" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.querySelectorAll(".marquee-container").forEach((container) => {
+      const content = container.querySelector(".marquee-content");
+      const repeatCount = 5; // Number of times to repeat the content
+
+      // duplicate the icons
+      const items = Array.from(content.children);
+      for (let i = 0; i < repeatCount - 1; i++) {
+        items.forEach((item) => {
+          content.appendChild(item.cloneNode(true));
+        });
+      }
+    });
+
+    $(document).ready(function () {
+      const $cursor = $(".cursor");
+
+      $(document).on("mousemove", function (e) {
+        // Update the cursor position
+        $cursor.css({
+          top: e.clientY + "px",
+          left: e.clientX + "px",
+        });
+      });
+
+      $(document).on("mouseleave", function () {
+        // Hide cursor when leaving the window
+        $cursor.hide();
+      });
+
+      $(document).on("mouseenter", function () {
+        // Show cursor when entering the window
+        $cursor.show();
+      });
+    });
+  </script>
+</html>
